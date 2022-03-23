@@ -5,11 +5,32 @@ const path = require('path');
 
 const sequelize = require('./config/connection');
 
+// set up handlebars.js
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
+app.set('view engine', 'handlebars');
+app.engine('handlebars', hbs.engine);
+
+// session cookies
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {},
+  resave: false,
+  saveUnitialized: true,
+  store: new SequelizeStore({ db: sequelize }),
+};
+
 // insert middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// session middleware
+app.use(session(sess));
+
+// routes
 app.use(require('./controllers/index'));
 
 const PORT = process.env.PORT || 3001;

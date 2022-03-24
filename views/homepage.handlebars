@@ -1,1 +1,9 @@
-<h1>Hello!</h1>
+{{!-- We created a full HTML layout and then broke it apart. The following line pulls in the header from the partial. --}}
+{{!-- headline creates a variable --}}
+{{> header headline='The Tech Blog'}}
+
+<ol class='post-list'>
+  {{#each posts as |post|}}
+    {{> post-info post}}
+  {{/each}}
+</ol>

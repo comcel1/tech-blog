@@ -50,10 +50,10 @@ router.post('/', (req, res) => {
 // localhost:3001/api/comments/id
 router.put('/:id', (req, res) => {
   Comment.update(
-    { comment_text: req.body.comment_text },
     {
       where: { id: req.params.id },
-    }
+    },
+    { comment_text: req.body.comment_text }
   )
     .then((data) => {
       if (!data) {

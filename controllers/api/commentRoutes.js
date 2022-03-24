@@ -33,8 +33,7 @@ router.get('/:id', (req, res) => {
 // localhost:3001/api/comments/
 router.post('/', (req, res) => {
   Comment.create({
-    // user_id: req.session.user_id,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
     post_id: req.body.post_id,
     comment_text: req.body.comment_text,
   })

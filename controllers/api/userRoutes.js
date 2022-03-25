@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post } = require('../../models');
-const { restore } = require('../../models/User');
 
 // get everything, exclude password
 // localhost:3001/api/users/
@@ -43,7 +42,14 @@ router.post('/', (req, res) => {
     password: req.body.password,
   })
     .then((data) => {
-      res.json(data);
+      req.session.save(() => {
+        // session variables (this follows you from page to page)
+        req.session.user_id = data.id;
+        req.session.username = data.username;
+        req.session.loggedIn = true;
+
+        res.json({ user: data, message: 'You are now logged in!' });
+      });
     })
     .catch((err) => {
       console.log(err);

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // getAll, getSingle, create, update, delete Routes
 // localhost:3001/api/comments
@@ -46,7 +47,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// localhost:3001/api/comments/id
+// localhost:3001/api/comments/:id
 router.put('/:id', (req, res) => {
   Comment.update(
     {

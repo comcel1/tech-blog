@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get single user, exclude password localhost:3001/api/users/:id
 router.get('/:id', (req, res) => {
   User.findOne({
     where: { id: req.params.id },
@@ -36,6 +37,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// Create a new user localhost:3001/api/users/
 router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
@@ -57,7 +59,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// log in
+// log in localhost:3001/api/users/login
 router.post('/login', (req, res) => {
   User.findOne({ where: { username: req.body.username } })
     .then((data) => {
@@ -87,7 +89,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-// log out the user
+// log out the user localhost:3001/api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {

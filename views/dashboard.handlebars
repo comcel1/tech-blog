@@ -1,0 +1,23 @@
+{{> header headline='Dashboard'}}
+
+
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <article>
+      <a href='dashboard/{{post.id}}'>
+        <div>
+          <h2>{{post.title}}</h2>
+          <p>{{format_date post.createdAt}}</p>
+        </div>
+      </a>
+    </article>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<a href="/dashboard/new-post">+New Post</a>

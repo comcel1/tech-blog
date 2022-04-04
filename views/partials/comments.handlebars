@@ -1,0 +1,13 @@
+{{#each this}}
+  <section>
+    <div></div>
+    <div>
+      <p>{{comment_text}}</p>
+    </div>
+    <div>
+      –{{user.username}}
+      on
+      {{format_date createdAt}}
+    </div>
+  </section>
+{{/each}}

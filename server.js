@@ -7,7 +7,9 @@ const sequelize = require('./config/connection');
 
 // set up handlebars.js
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+// this gives handlebars access to the helpers functions in the utils folder
+const hbs = exphbs.create({ helpers });
 app.set('view engine', 'handlebars');
 app.engine('handlebars', hbs.engine);
 

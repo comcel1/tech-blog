@@ -1,19 +1,28 @@
 {{> header headline='Dashboard'}}
 
-<section>
-  <h2>Create New Post</h2>
+<article class='box post update-post'>
+  <div class='post-heading'>
+    <h2 class='title'>Create New Post</h2>
+  </div>
 
-  <form class='new-post-form'>
-    <div>
-      <label for='post-title'>Title</label>
-      <input type='text' id='post-title' name='post-title' />
+    <div class="update-wrapper">
+      <form class='new-post-form'>
+        <div>
+          <label for='post-title'>Title</label>
+          <input type='text' id='post-title' name='post-title' />
+        </div>
+        <div>
+          <label for='post-body'>Content</label>
+          <textarea 
+          name='post-body' 
+          id='post-body' 
+          class="comment-textarea update-post-textarea">
+          </textarea>
+        </div>
+        <button type='submit' class='update-post-btn'>Create</button>
+      </form>
     </div>
-    <div>
-      <label for='post-body'>Content</label>
-      <textarea name='post-body' id='post-body'></textarea>
-    </div>
-    <button type='submit' class='btn'>Create</button>
-  </form>
-</section>
+  </div>
+</article>
 
 <script src='/js/add-post.js'></script>

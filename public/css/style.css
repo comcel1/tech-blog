@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgba(35, 16, 16);
+  --secondary-color: rgba(217, 234, 211);
+  --tertiary-color: rgba(102, 102, 102);
+}
+
+/* header styles start */
+.header-container {
+  padding: 20px 35px;
+  background-color: var(--primary-color);
+}
+
+.page-title-wrapper {
+  background-color: var(--secondary-color);
+  width: fit-content;
+  color: var(--primary-color);
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 var(--tertiary-color);
+}
+
+nav {
+  display: flex;
+}
+
+nav a,
+nav button {
+  color: var(--secondary-color);
+  font-size: 18px;
+  text-decoration: none;
+  margin: 10px 50px 0 10;
+}
+
+nav a:last-child,
+nav button {
+  margin-right: 0;
+}
+
+#logout {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+}
+
+/* Body */
+
+body {
+  color: var(--primary-color);
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--secondary-color);
+}
+
+/* Main Handlebars */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.header-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-title-wrapper {
+  background-color: var(--secondary-color);
+  width: fit-content;
+  color: var(--primary-color);
+  margin-left: 10px;
+  border-radius: 15px;
+  box-shadow: 7px 7px 0 rgba(168, 168, 168, 255);
+}
+
+.page-title {
+  font-size: 42px;
+  cursor: default;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a,
+nav button {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  margin: 20px 70px 0 10px;
+}
+
+nav a:last-child,
+nav button {
+  margin-right: 0;
+}
+
+#logout {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+}
+
+ol {
+  list-style: none;
+  padding: 10;
+}
+
+/* Posts and Comments Style Start */
+/* boxes around various elements on the site */
+.box {
+  width: 90%;
+  margin: 0 auto 20px;
+  border: 3px solid var(--primary-color);
+}
+
+.post-heading {
+  display: flex;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 20px;
+}
+
+.post-heading a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 26px;
+}
+
+.meta {
+  margin-bottom: 3px;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.post-content,
+.comment-content {
+  margin: 10px 20px;
+}
+
+/* Comments Style Start */
+.box-heading {
+  padding: 25px 0 25px 0;
+  background-color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.meta-comment {
+  margin-bottom: 30px;
+}
+
+/* Add Comment Style Start */
+.add-comment-heading,
+.account-heading {
+  margin-bottom: 0;
+}
+
+.comment-form p {
+  margin: 10px 0 10px 25px;
+}
+
+.comment-textarea,
+.submit-comment {
+  width: 100%;
+  font-size: 20px;
+}
+
+.comment-textarea {
+  margin-bottom: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border: 3px solid #719ece;
+  box-shadow: 0 0 3px #719ece;
+}
+
+.submit-comment {
+  margin-bottom: 20px;
+  padding: 10px 0 10px 0;
+  background-color: var(--button-color);
+  color: white;
+  border-radius: 8px;
+}
+
+.submit-comment:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* .updated-wrapper is from update-post style */
+.add-comment-body,
+.update-wrapper {
+  width: 97.5%;
+  margin: 0 auto;
+}
+
+/* Login and Sign Up Style Start */
+.account-form {
+  margin-top: 16px;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.account-form-wrapper {
+  margin: 10px 20px 20px;
+}
+
+input {
+  height: 40px;
+}
+
+input,
+.account-btn,
+.update-post-btn {
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.account-btn,
+.update-post-btn {
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+.account-link {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* Dashboard Style Start */
+.dashboard-post-wrapper {
+  width: 90%;
+  margin: 16px auto 0;
+  background-color: var(--button-color);
+  border-radius: 15px;
+}
+
+.dashboard-post-link {
+  text-decoration: none;
+  color: white;
+}
+
+.dashboard-post-link:hover {
+  background-color: var(--button-hover-color);
+}
+
+.dashboard-post {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.new-post-btn {
+  position: absolute;
+  font-size: 28px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  border-radius: 10px;
+  width: 200px;
+  right: calc(50% - 100px);
+  bottom: 5%;
+}
+
+/* Update/Delete Posts Style Start */
+.update-post {
+  margin-top: 16px;
+  font-size: 26px;
+}
+
+#edit-post-title,
+#new-post-title,
+#new-post-content {
+  outline: none;
+  border: 3px solid #719ece;
+  box-shadow: 0 0 3px #719ece;
+  margin-bottom: 20px;
+}
+
+#delete-btn,
+#create-post-btn {
+  margin-bottom: 20px;
+}

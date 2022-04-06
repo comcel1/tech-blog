@@ -16,6 +16,10 @@
   background-color: var(--primary-color);
 }
 
+.container {
+  margin: 0px 20px;
+}
+
 .page-title-wrapper {
   background-color: var(--secondary-color);
   width: fit-content;
@@ -92,9 +96,10 @@ p {
 }
 
 .page-title {
-  font-size: 42px;
+  font-size: 36px;
   cursor: default;
   padding: 10px 20px;
+  margin: 20px;
 }
 
 nav {
@@ -202,13 +207,9 @@ ol {
 .submit-comment {
   margin-bottom: 20px;
   padding: 10px 0 10px 0;
-  background-color: var(--button-color);
+  background-color: var(--tertiary-color);
   color: white;
   border-radius: 8px;
-}
-
-.submit-comment:hover {
-  background-color: var(--button-hover-color);
 }
 
 /* .updated-wrapper is from update-post style */
@@ -258,17 +259,14 @@ input,
 .dashboard-post-wrapper {
   width: 90%;
   margin: 16px auto 0;
-  background-color: var(--button-color);
-  border-radius: 15px;
+  padding: 10px 0 10px 0;
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
 }
 
 .dashboard-post-link {
   text-decoration: none;
   color: white;
-}
-
-.dashboard-post-link:hover {
-  background-color: var(--button-hover-color);
 }
 
 .dashboard-post {

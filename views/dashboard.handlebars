@@ -1,15 +1,12 @@
 {{> header headline='Your Dashboard'}}
 
-
-
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
-    <article>
-      <a href='dashboard/{{post.id}}'>
-        <div>
+    <article class='dashboard-post-wrapper'>
+      <a href='dashboard/{{post.id}}' class='dashboard-post-link'>
+        <div class='dashboard-post'>
           <h2>{{post.title}}</h2>
           <p>{{format_date post.createdAt}}</p>
         </div>

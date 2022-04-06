@@ -1,24 +1,29 @@
 {{> header headline='Dashboard'}}
 
-<article>
-  <div>Edit Post</div>
-  <form>
-    <div>
-      <label for='post-title'>Title</label>
-      <input
-        name='post-title'
-        id='post-title'
-        type='text'
-        value='{{post.title}}'
-      />
-    </div>
-    <div>
-      <label for='post-body'>Content</label>
-      <textarea name='post-body' id='post-body'>{{post.post_text}}</textarea>
-    </div>
-    <button id='update-button'>Update</button>
-    <button id='delete-button'>Delete</button>
-  </form>
+<article class='box post update-post'>
+  <div class='post-heading'>
+    <div class='title'>Edit Post</div>
+  </div>
+
+  <div class='update-wrapper'>
+    <form>
+      <div>
+        <label for='post-title'>Title</label>
+        <input
+          name='post-title'
+          id='post-title'
+          type='text'
+          value='{{post.title}}'
+        />
+      </div>
+      <div>
+        <label for='post-body'>Content</label>
+        <textarea name='post-body' id='post-body' class='comment-textarea update-post-textarea'>{{post.post_text}}</textarea>
+      </div>
+      <button id='update-button' class='update-post-btn'>Update</button>
+      <button id='delete-button' class='update-post-btn'>Delete</button>
+    </form>
+  </div>
 </article>
 
 <script src='/js/edit-post.js'></script>
